@@ -54,9 +54,7 @@ class _GameTextFieldState extends State<GameTextField> {
   Widget build(BuildContext context) {
     final gameData = Provider.of<GameStateProvider>(context);
     return leaderPlayer['isLeader'] && showStartBtn
-        ? CustomButton(
-            text: leaderPlayer['isLeader'].toString(),
-            onTap: () => handleStart(gameData))
+        ? CustomButton(text: 'Start', onTap: () => handleStart(gameData))
         : TextField(
             controller: wordController,
             readOnly: gameData.gameState['isJoin'],
